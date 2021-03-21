@@ -7,10 +7,21 @@ const registerValidation = data =>{
         name: Joi.string()
             .required(),
         id: Joi.string()
-            .required(),
+            .required()
+            .min(7)
+            .max(7),
         hash: Joi.string()
             .min(6)
+            .required(),
+        carrera: Joi.string()
+            .required(),
+        semestre: Joi.string()
             .required()
+            .max(2),
+        area: Joi.string()
+            .required(),
+        objetivos: Joi.string()      
+        
     });
     return schema.validate(data);
 };
