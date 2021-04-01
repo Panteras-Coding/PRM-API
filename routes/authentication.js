@@ -7,11 +7,11 @@ const {registerValidation, loginValidation} = require('../validation/validation'
 
 
 //Firebase configuration
-const serviceAccount = require('../panteras-ppm-api-firebase-adminsdk-eo9kb-461440c81e.json');
+const serviceAccount = require('../base-datos-api-ppm-firebase-adminsdk-9iodw-612bf064af.json');
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL: 'https://panteras-ppm-api-default-rtdb.firebaseio.com/'
+    databaseURL: 'https://base-datos-api-ppm-default-rtdb.firebaseio.com/'
 });
 dataBase = admin.database();
 
@@ -42,7 +42,11 @@ router.post("/register", async (req,res)=>{
                 name: req.body.name,    
                 id: req.body.id,
                 email:req.body.id+"@up.edu.mx",
-                hash:hash
+                hash:hash,
+                carrera: req.body.carrera, 
+                semestre: req.body.semestre,
+                area: req.body.area
+
             });
             return res.status(200).send("Usuario Creado").end();
         }catch(err){
