@@ -4,11 +4,11 @@ const dotenv = require('dotenv');
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-dotenv.config()
+dotenv.config();
 
 
 app.get("/", (req,res)=>{
-    res.send("Hola desde home");
+    res.send("Up and running");
 });
 
 

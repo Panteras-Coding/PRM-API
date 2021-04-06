@@ -7,11 +7,11 @@ const {registerValidation, loginValidation} = require('../validation/validation'
 
 
 //Firebase configuration
-const serviceAccount = require('../base-datos-api-ppm-firebase-adminsdk-9iodw-612bf064af.json');
+const serviceAccount = require('../panteras-project-management-firebase-adminsdk-ur5aj-92f8d0685a.json');
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL: 'https://base-datos-api-ppm-default-rtdb.firebaseio.com/'
+    databaseURL: 'https://panteras-project-management-default-rtdb.firebaseio.com/'
 });
 dataBase = admin.database();
 
