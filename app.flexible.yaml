@@ -1,5 +1,5 @@
 # app.yaml file
-runtime: custom
+runtime: nodejs
 env: flex
 
 manual_scaling:
