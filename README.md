@@ -15,8 +15,7 @@ El camino espera un objeto como el siguiente -->
                     "id":"0123456",
                     "hash":"123456789",
                     "carrera": "ing TI",
-                    "semestre":"2",
-                    "area":"Backend"
+                    "semestre":"2"
                 }
 
 Todos los campos son requeridos por defecto y en el caso del ID tiene que ser exactamente de 7 caracteres y la contraseña es de minimo 8 caracteres.

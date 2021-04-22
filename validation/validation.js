@@ -17,11 +17,7 @@ const registerValidation = data =>{
             .required(),
         semestre: Joi.string()
             .required()
-            .max(2),
-        area: Joi.string()
-            .required(),
-        objetivos: Joi.string()      
-        
+            .max(2)
     });
     return schema.validate(data);
 };

@@ -44,8 +44,7 @@ router.post("/register", async (req,res)=>{
                 email:req.body.id+"@up.edu.mx",
                 hash:hash,
                 carrera: req.body.carrera, 
-                semestre: req.body.semestre,
-                area: req.body.area
+                semestre: req.body.semestre
 
             });
             return res.status(200).send("Usuario Creado").end();
