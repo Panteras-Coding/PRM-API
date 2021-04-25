@@ -39,12 +39,14 @@ router.post("/register", async (req,res)=>{
         //CARGAMOS EL USUARIO A LA BASE DE DATOS
         try{
             await dataBase.ref('Users').push({
-                name: req.body.name,    
+                name: req.body.name, 
+                lastName: req.body.lastName,   
                 id: req.body.id,
                 email:req.body.id+"@up.edu.mx",
                 hash:hash,
                 carrera: req.body.carrera, 
-                semestre: req.body.semestre
+                semestre: req.body.semestre,
+                grupo: req.body.grupo
 
             });
             return res.status(200).send("Usuario Creado").end();

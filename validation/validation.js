@@ -6,6 +6,8 @@ const registerValidation = data =>{
     const schema = Joi.object({
         name: Joi.string()
             .required(),
+        lastName: Joi.string()
+            .required(),
         id: Joi.string()
             .required()
             .min(7)
@@ -17,7 +19,9 @@ const registerValidation = data =>{
             .required(),
         semestre: Joi.string()
             .required()
-            .max(2)
+            .max(2),
+        grupo: Joi.string()
+            .required()
     });
     return schema.validate(data);
 };
